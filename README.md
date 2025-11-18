@@ -1,66 +1,96 @@
-# 🃏 Solitaire Game (C++ OOP)
+Space Shooter is a console-based arcade game.
+ The player controls a jet to shoot downward enemies while avoiding collisions.
+ 
 
-<p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Klondike-Patience-Game.svg" width="400" alt="Solitaire Game Preview">
-</p>
+Features:
 
-<p align="center">
-  <b>A fully object-oriented Solitaire game built in C++</b><br>
-  Experience the classic card game implemented with modern C++ principles — classes, encapsulation, inheritance, and polymorphism.
-</p>
+a.Player login and registration with password verification.
 
----
+b.Track individual and overall high scores.
 
-## 🎯 Project Overview
+c.Arrow key movement for the jet:
 
-This project is a **console-based Solitaire game** built using **Object-Oriented Programming (OOP)** concepts in **C++**.  
-It demonstrates strong modular design and reusability while providing an interactive, logic-rich gaming experience.
+d.Left Arrow: Move left
 
----
+a..Right Arrow: Move right
 
-## 🧩 Features
+b.Spacebar: Shoot bullets
 
-✅ **Object-Oriented Architecture** – Clean and modular design with classes for `Card`, `Deck`, `Pile`, `Game`, etc.  
-✅ **Encapsulation & Abstraction** – Core game logic neatly hidden behind class interfaces.  
-✅ **Dynamic Memory Handling** – Proper use of constructors, destructors, and pointers.  
-✅ **Game Logic** – Realistic Solitaire moves, card flipping, and validation.  
-✅ **Cross-Platform** – Runs smoothly on Windows, Linux, and macOS (console-based).  
-✅ **Future Ready** – Can be easily extended with GUI using SFML or Qt.
+c.Escape: Exit the game
 
----
+d.Dynamic enemy generation and movement.
 
-## 🏗️ Class Structure
+e.Collision detection between jet and enemies.
 
-| Class | Description |
-|-------|--------------|
-| `Card` | Represents a playing card (suit, rank, visibility). |
-| `Deck` | Manages shuffling and dealing of cards. |
-| `Pile` | Handles a stack of cards in tableau or foundation. |
-| `Game` | Main class that controls game state and rules. |
-| `Player` | Manages player actions and score (optional). |
-| `Utils` | Helper functions for rendering and input. |
+f.Score display and life counter.
 
----
+g.Save game instructions in a separate text file.
 
-## 💡 OOP Concepts Used
+h.Sound effects for shooting and collisions.
 
-| Concept | Implementation Example |
-|----------|------------------------|
-| **Encapsulation** | Private card attributes with getters/setters. |
-| **Abstraction** | High-level game operations like `moveCard()`, `flipCard()`. |
-| **Inheritance** | Specialized piles (FoundationPile, TableauPile) derived from base class. |
-| **Polymorphism** | Overridden behavior for move validation and card display. |
-| **Composition** | `Game` contains multiple `Deck` and `Pile` objects. |
+Controls:
 
----
+a.Move Left - Left Arrow
+b.Move Right - Right Arrow
+c.Shoot Bullet - Spacebar
+d.Exit Game	- Escape
 
-## ⚙️ How to Run
+Files:
 
-### 🖥️ Requirements
-- C++ Compiler (GCC, Clang, or MSVC)
-- Makefile or IDE (Code::Blocks / Visual Studio / Dev-C++)
+a.Main.cpp: Contains the game loop, player login, menu, and initialization.
 
-### 🧱 Build & Run
-```bash
-g++ main.cpp Game.cpp Deck.cpp Card.cpp Pile.cpp -o solitaire
-./solitaire
+b.Functions.h OR functions.cpp: Game logic functions (drawing jet,drawing enemies, movement, collision detection, scoring, file handling for the user names and high scores).
+
+c.Game.txt: Stores registered players and their passwords.
+
+d.Player_Scores.txt: Stores player-specific high scores.
+
+e.Overall_High_Score.txt: Stores the overall high score.
+
+f.Instructions.txt: Saved instructions for the game.
+
+Installation:
+
+a.Clone or download the repository.
+
+b.Open the project in a C++ IDE (e.g., Visual Studio) that supports Windows console applications.
+
+c.Compile and run the project.
+
+d.Ensure game.txt, Player_Scores.txt, and Overall_High_Score.txt are writable by the program.
+
+How to Play:
+
+a.Launch the game executable.
+
+b.Enter your player name. If it’s a new player, set a password.
+
+c.Log in with your password.
+
+d.Choose from the menu:
+
+a.Start Game: Begin playing.
+
+b.Restart: Return to player login.
+
+c.Instructions: View game instructions.
+
+d.Quit: Exit the game.
+
+e.Control your jet to shoot enemies and avoid collisions.
+
+f.Track your score and try to beat individual and overall high scores.
+
+Game Logic Highlights:
+
+a.Player Authentication: Handles new user registration and existing user login with 3 password attempts.
+
+b.Enemy Generation: Random enemy positions at the top of the screen.
+
+c.Bullet Mechanics: Two bullets can be fired simultaneously; bullets move upwards and reset upon hitting enemies.
+
+d.Collision Detection: Detects collisions between bullets and enemies, as well as jet and enemies.
+
+e.Score Handling: Individual and overall high scores are saved and displayed dynamically.
+
+f.Console Graphics: Uses ASCII graphics and console cursor manipulation (gotoxy) for game visuals.
