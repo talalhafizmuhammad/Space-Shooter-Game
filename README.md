@@ -1,96 +1,144 @@
-Space Shooter is a console-based arcade game.
- The player controls a jet to shoot downward enemies while avoiding collisions.
- 
+🚀 Space Shooter – Console Arcade Game
 
-Features:
+A fast-paced console-based arcade shooter where the player controls a jet to destroy incoming enemies while avoiding collisions.
+The game includes player authentication, score tracking, ASCII graphics, and sound effects.
 
-a.Player login and registration with password verification.
+🎮 Features
+🔐 Player System
 
-b.Track individual and overall high scores.
+User login & registration
 
-c.Arrow key movement for the jet:
+Password verification with 3 attempts
 
-d.Left Arrow: Move left
+Individual player profiles
 
-a..Right Arrow: Move right
+Saves personal high scores
 
-b.Spacebar: Shoot bullets
+🏆 Score System
 
-c.Escape: Exit the game
+Track individual and overall high scores
 
-d.Dynamic enemy generation and movement.
+Automatically updates and saves high scores to files
 
-e.Collision detection between jet and enemies.
+✈️ Gameplay
 
-f.Score display and life counter.
+Smooth arrow-key movement
 
-g.Save game instructions in a separate text file.
+Spacebar shooting with dual-bullet mechanics
 
-h.Sound effects for shooting and collisions.
+Dynamic enemy spawn and movement
 
-Controls:
+Collision detection (bullets vs enemies / jet vs enemies)
 
-a.Move Left - Left Arrow
-b.Move Right - Right Arrow
-c.Shoot Bullet - Spacebar
-d.Exit Game	- Escape
+Lives counter and score display
 
-Files:
+ASCII-based console graphics
 
-a.Main.cpp: Contains the game loop, player login, menu, and initialization.
+Sound effects for shooting and collisions
 
-b.Functions.h OR functions.cpp: Game logic functions (drawing jet,drawing enemies, movement, collision detection, scoring, file handling for the user names and high scores).
+⌨️ Controls
+Action	Key
+Move Left	⬅️ Left Arrow
+Move Right	➡️ Right Arrow
+Shoot Bullet	Spacebar
+Exit Game	Escape (Esc)
+📂 Project Files Structure
+File	Description
+main.cpp	Main game loop, player login, menu handling, initialization
+functions.h / functions.cpp	Game logic (drawing jet/enemies, movement, collisions, file I/O, scoring)
+Game.txt	Registered users & passwords
+Player_Scores.txt	Player-specific high scores
+Overall_High_Score.txt	Stores overall highest score
+Instructions.txt	Game instructions saved from the menu
+🛠️ Installation
 
-c.Game.txt: Stores registered players and their passwords.
+Clone or download the repository:
 
-d.Player_Scores.txt: Stores player-specific high scores.
+git clone https://github.com/your-username/your-repo.git
 
-e.Overall_High_Score.txt: Stores the overall high score.
 
-f.Instructions.txt: Saved instructions for the game.
+Open project in a C++ IDE that supports Windows Console Applications
+(Visual Studio, CodeBlocks, Dev-C++, etc.)
 
-Installation:
+Compile and run the game.
 
-a.Clone or download the repository.
+Ensure the following files are writable:
 
-b.Open the project in a C++ IDE (e.g., Visual Studio) that supports Windows console applications.
+Game.txt
 
-c.Compile and run the project.
+Player_Scores.txt
 
-d.Ensure game.txt, Player_Scores.txt, and Overall_High_Score.txt are writable by the program.
+Overall_High_Score.txt
 
-How to Play:
+🎯 How to Play
 
-a.Launch the game executable.
+Launch the game executable.
 
-b.Enter your player name. If it’s a new player, set a password.
+Enter your username.
 
-c.Log in with your password.
+New user → register with a password
 
-d.Choose from the menu:
+Existing user → login (3 password attempts allowed)
 
-a.Start Game: Begin playing.
+Choose from the main menu:
 
-b.Restart: Return to player login.
+Start Game – begin playing
 
-c.Instructions: View game instructions.
+Restart – logout and return to login screen
 
-d.Quit: Exit the game.
+Instructions – view control guide
 
-e.Control your jet to shoot enemies and avoid collisions.
+Quit – exit the game
 
-f.Track your score and try to beat individual and overall high scores.
+Control your jet, shoot enemies, avoid collisions.
 
-Game Logic Highlights:
+Try to beat your personal and overall high scores.
 
-a.Player Authentication: Handles new user registration and existing user login with 3 password attempts.
+🧠 Game Logic Overview
+🔑 Player Authentication
 
-b.Enemy Generation: Random enemy positions at the top of the screen.
+New users register with a password
 
-c.Bullet Mechanics: Two bullets can be fired simultaneously; bullets move upwards and reset upon hitting enemies.
+Existing users are authenticated with limited attempts
 
-d.Collision Detection: Detects collisions between bullets and enemies, as well as jet and enemies.
+Data stored securely in text files
 
-e.Score Handling: Individual and overall high scores are saved and displayed dynamically.
+👾 Enemy Mechanics
 
-f.Console Graphics: Uses ASCII graphics and console cursor manipulation (gotoxy) for game visuals.
+Enemies spawn randomly at the top of the screen
+
+Move downward each frame
+
+Reset on collision or on reaching the bottom
+
+🔫 Bullet System
+
+Two bullets can exist simultaneously
+
+Move upward each frame
+
+Reset after impact or leaving screen
+
+💥 Collision Detection
+
+Bullet ↔ Enemy collision
+
+Jet ↔ Enemy collision (reduces lives)
+
+📊 Scoring
+
+Scores updated in real-time
+
+File handling for:
+
+Player high scores
+
+Overall highest score
+
+🖥️ Console Graphics
+
+ASCII character sprites (jet, enemies, bullets)
+
+Cursor control using Windows console API
+
+Simple sound effects for shooting & crashes
